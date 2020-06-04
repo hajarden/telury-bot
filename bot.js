@@ -12,8 +12,8 @@ const Yt = require("discord-youtube-api");
 
 
 const client = new Discord.Client();
-const pastebin = new PastebinAPI('633fcbdacbff82bfd5dd821a9f8921f7');
-const youtube = new Yt("AIzaSyCe-nr54PAoHraqVupp5hC2aM3f-_eDD84");
+const pastebin = new PastebinAPI('#');
+const youtube = new Yt("#");
 const queue = new Map();
 
 
