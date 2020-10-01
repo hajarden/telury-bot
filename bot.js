@@ -52,6 +52,17 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
+// KALO ADA MEMBER JOIN
+client.on('guildMemberAdd', async (member) => {  
+	// Send the message to a designated channel on a server:
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
+	// Do nothing if the channel wasn't found on this server
+	if (!channel) console.log('');
+	// Send the message, mentioning the member
+	await channel.send(`Haii ${member}, Selamat bergabung.. semoga betah ^^`);
+  });
+
+
 client.on('message', msg => {
 	const args = msg.content.slice(prefix.length).split(' ');
 	const commands = args.shift().toLowerCase();
